@@ -1,0 +1,16 @@
+.glow-animation {
+    animation: glow 1.5s infinite alternate;
+    text-shadow: 0 0 2px #f9e54e, 0 0 10px #f9e54e, 0 0 15px #f9e54e;
+  }
+  
+  @keyframes glow {
+    0% {
+      opacity: 0.8;
+      text-shadow: 0 0 2px #f9e54e, 0 0 5px #f9e54e, 0 0 15px #f9e54e;
+    }
+    100% {
+      opacity: 1;
+      text-shadow: 0 0 10px #f9e54e, 0 0 15px #f9e54e, 0 0 20px #f9e54e;
+    }
+  }
+  
