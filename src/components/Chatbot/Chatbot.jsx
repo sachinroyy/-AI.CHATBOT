@@ -142,7 +142,7 @@ const App = () => {
 
   const latestMessageRef = useRef(null);
 
-  const genAI = new GoogleGenerativeAI("AIzaSyCGeEZqf4MAQJrf8MNghDHearwdDe07njg");
+  const genAI = new GoogleGenerativeAI("AIzaSyDmqPAZtWS6SugZSlBRjdtyKTnuLmo6ISw");
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
   const toggleChat = () => {
@@ -214,10 +214,10 @@ const App = () => {
       {/* Chat Popup Window */}
       {isChatOpen && (
         <div className="w-[90%] sm:w-80 h-[500px] sm:h-96 bg-[#282A5D] shadow-lg rounded-lg p-4 flex flex-col">
-          <h2 className="text-lg font-bold mb-2 text-white text-center">
+          <h2 className="text-lg font-bold mb-2 text-black text-center">
             Hey!!!! How can I help you??
           </h2>
-          <div className="flex-1 overflow-y-auto mb-4 bg-black rounded-md p-2">
+          <div className="flex-1 overflow-y-auto mb-4 bg-black rounded-md p-2 text-black">
             {chatHistory.map((chat, index) => (
               <div
                 key={index}
@@ -242,7 +242,7 @@ const App = () => {
               onKeyDown={handleKeyPress}
             />
             <button
-              className="px-4 py-2 ml-2 rounded-lg bg-blue-500 text-white hover:bg-blue-600 focus:outline-none"
+              className="px-4 py-2 ml-2 rounded-lg bg-blue-500 text-white hover:bg-blue-600 focus:outline-none text-black"
               onClick={sendMessage}
               disabled={isLoading}
             >
